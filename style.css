@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    overflow: hidden;
+    width: 250px;
+    height: 70px;
+    display: flex;
+    background-color: #0000ff;
+    border-radius: 20px;
+    position: relative;
+}
+
+.button > p{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 auto;
+    align-self: center;
+    font-size: 20px;
+    z-index: 1;
+    color: #fff;
+}
+
+.button > span{
+    transition: 2s;
+    transition-duration: 0;
+    z-index: 0;
+    position: absolute;
+    margin: 0 auto;
+    display: block;
+}
+
+.button > span:nth-of-type(1){
+    background-color: #000;
+    top: -250px;
+    border-radius: 45%;
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 300px;
+    animation: rotate-first infinite;
+    animation-delay: 0;
+    animation-duration: 5s;
+    animation-timing-function:linear;
+}
+
+.button > span:nth-of-type(2){
+    background-color: #00000050;
+    top: -250px;
+    border-radius: 35%;
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 300px;
+    animation: rotate-first infinite;
+    animation-delay: 0;
+    animation-duration: 10s;
+    animation-timing-function:linear;
+}
+
+.button:hover > span{
+    top: -350px;
+}
+
+@keyframes rotate-first{
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
